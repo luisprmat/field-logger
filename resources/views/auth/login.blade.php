@@ -9,6 +9,7 @@
                 name="email"
                 type="email"
                 class="mt-1 mb-3 w-full rounded border border-gray-700 bg-gray-800/40 p-2"
+                value="{{ old('email') }}"
                 autocomplete="username"
                 required
             />

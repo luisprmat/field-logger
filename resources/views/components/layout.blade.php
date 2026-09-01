@@ -10,7 +10,7 @@
 <body class="min-h-full bg-gray-950 text-gray-100">
     <header class="flex items-center justify-between border-b border-white/10 px-4 py-3">
         <h1 class="font-semibold">
-            <a href="#">Field Logger</a>
+            <a href="{{ route('meters.index') }}">Field Logger</a>
         </h1>
         @auth
             <form method="POST" action="{{ route('logout') }}">
