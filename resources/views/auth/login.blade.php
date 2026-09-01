@@ -1,4 +1,4 @@
-<x-layout :title="__('Log in')">
+<x-layout :title="__('Login')">
     <div class="mx-auto mt-16 max-w-sm rounded-2xl bg-white/5 p-6 shadow">
         <form method="POST" action="{{ route('login') }}">
             @csrf
@@ -23,7 +23,7 @@
             @error('email')
                 <p class="mb-2 text-sm text-red-400">{{ $message }}</p>
             @enderror
-            <button class="w-full rounded-2xl bg-blue-600 py-2 hover:bg-blue-500">{{ __('Log in') }}</button>
+            <button class="w-full rounded-2xl bg-blue-600 py-2 hover:bg-blue-500">{{ __('Login') }}</button>
         </form>
     </div>
 </x-layout>
