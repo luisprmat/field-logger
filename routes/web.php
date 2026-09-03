@@ -6,6 +6,7 @@ use App\Http\Controllers\ReadingController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('manifest.json', PwaManifestController::class)->name('pwa.manifest');
+Route::view('/offline', 'offline')->name('offline');
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/', fn () => redirect()->intended(route('meters.index')));

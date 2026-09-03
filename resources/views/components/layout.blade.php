@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="manifest" href="{{ route('pwa.manifest') }}">
+    <link rel="manifest" href="{{ route('pwa.manifest') }}" />
     <title>{{ $title ?? config('app.name') }}</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
@@ -26,5 +26,10 @@
         @endif
         {{ $slot }}
     </main>
+    <script>
+        window.addEventListener('load', (e) => {
+            navigator.serviceWorker.register('/sw.js', { scope: '/' });
+        });
+    </script>
 </body>
 </html>
